@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Products</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Agri Root Products</title>
+    </head>
+    <body>
+    
+        <header>
+            <img src="images\logo.png" alt="Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="visionary.html">Visionary</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html"><button id="cartButton">
+                    <i class="fas fa-shopping-cart"></i>
+                </button></a>
+                <a href="popup.html"><button id="accountButton">
+                    <i class="fas fa-user"></i>
+                </button></a>
+            </nav>
+            
+        </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .price {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #777;
+        }
+        .price span {
+            font-weight: bold;
+            color: #000;
+        }
+        .quantity-selection {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 0px 05px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        button:hover {
+            background-color: #218838;
+        }
+        .header .icon-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .icon-buttons button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 28px;
+        }
+        .icon-buttons button:hover {
+            color: #ccc;
+        }
+    </style>
+
+<div class="container">
+    <h1>Agri Root Products</h1>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="images\bitter guard.png" alt="Product 1">
+            <h3>Bitter Guard Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Bitter guard Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="images\bottel guard.png" alt="Product 2">
+            <h3>Bottle Guard Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Bottle guard Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="images\brinjal.png" alt="Product 3">
+            <h3>Brinjal Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Brinjal Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="images\coriander.png" alt="Product 4">
+            <h3>Coriander seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Coriander Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="images\fenugreek.png" alt="Product 5">
+            <h3>Fenugreek Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('fenugreek Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="images\moringa.png" alt="Product 6">
+            <h3>Moringa Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Moringa Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="images\mustard.png" alt="Product 7">
+            <h3>Mustard Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Mustard Seeds', 300)">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="images\onion.png" alt="Product 8">
+            <h3>Onion Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Onion Seeds', 300)">Add to Cart</button>
+        </div>
+         <!-- Product 9 -->
+         <div class="product">
+            <img src="images\pea.png" alt="Product 9">
+            <h3>Pea Seeds</h3>
+            <div class="price">250g: <span>Rs.300</span></div>
+            <div class="price">500g: <span>Rs.600</span></div>
+            <div class="price">1kg: <span>Rs.1200</span></div>
+            <div class="quantity-selection">
+                <select>
+                    <option value="250g">250g - Rs.300</option>
+                    <option value="500g">500g - Rs.600</option>
+                    <option value="1kg">1kg - Rs.1200</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Pea Seeds', 300)">Add to Cart</button>
+        </div>
+ <!-- Product 10 -->
+ <div class="product">
+    <img src="images\pumpkin.png" alt="Product 10">
+    <h3>Pumpkin Seeds</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('pumpkin Seeds', 300)">Add to Cart</button>
+</div>
+ <!-- Product 11 -->
+ <div class="product">
+    <img src="images\radish.png" alt="Product 11">
+    <h3>Radish Seeds</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('Radish Seeds', 300)">Add to Cart</button>
+</div>
+ <!-- Product 12 -->
+ <div class="product">
+    <img src="images\tomato.png" alt="Product 12">
+    <h3>Tomato Seeds</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('tomato Seeds', 300)">Add to Cart</button>
+</div>
+ <!-- Product 13 -->
+ <div class="product">
+    <img src="images\watermelon seed.png" alt="Product 13">
+    <h3>Watermelon Seeds</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('Watermelon Seeds', 300)">Add to Cart</button>
+</div>
+ <!-- Product 14 -->
+ <div class="product">
+    <img src="images\Wheat Seeds.png" alt="Product 14">
+    <h3>Wheat</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('Wheat Seeds', 300)">Add to Cart</button>
+</div>
+ <!-- Product 15 -->
+ <div class="product">
+    <img src="images\muskmelon.png" alt="Product 15">
+    <h3>Muskmelon Seeds</h3>
+    <div class="price">250g: <span>Rs.300</span></div>
+    <div class="price">500g: <span>Rs.600</span></div>
+    <div class="price">1kg: <span>Rs.1200</span></div>
+    <div class="quantity-selection">
+        <select>
+            <option value="250g">250g - Rs.300</option>
+            <option value="500g">500g - Rs.600</option>
+            <option value="1kg">1kg - Rs.1200</option>
+        </select>
+    </div>
+    <button onclick="addToCart('Muskmelon', 300)">Add to Cart</button>
+</div>
+<script>
+    function addToCart(productName, productPrice) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let product = { name: productName, price: productPrice };
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart!');
+    }
+</script>
+<a href="cart.html">View Cart</a>
+                </body>
+                </html>

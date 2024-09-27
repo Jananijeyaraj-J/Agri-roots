@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #28a745;
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            width: 100%;
+            height: 800px;
+            background: url('images\banner.pngimages') no-repeat center center;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0px;
+            background-color: rgb(91, 218, 115);
+        }
+
+        h1 {
+            color: #28a745;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        ul.products {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            justify-content: center;
+        }
+
+        ul.products li {
+            flex: 1 1 30%;
+            background-color: #f9f9f9;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        ul.products li img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+        }
+        .content-section {
+           
+            padding: 20px;
+            background-color: #7fda9d;
+            text-align: center;
+        }
+        .content-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .content-section ul {
+            list-style: none;
+        }
+        #cartButton, #accountButton {
+   =         display: flex;
+            gap: 20px;
+        }
+
+
+button {
+            padding: 0px 0px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+
+<!-- Header Section -->
+<header>
+    <img src="images\logo.png" alt="Logo">
+    <nav>
+       
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="visionary.html">Visionary</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html"><button id="cartButton">
+            <i class="fas fa-shopping-cart"></i>
+        </button></a>
+        <a href="popup.html"><button id="accountButton">
+            <i class="fas fa-user"></i>
+        </button></a>
+    </nav>
+    
+</header>
+
+<!-- Banner for Home Page -->
+<div class="banner">
+    <img src="images\banner.png" alt="banner">
+    <!-- Add Banner Image Here -->
+</div>
+
+<!-- Content Section 1 -->
+    <section class="content-section" >
+        <h2>Welcome to Agri Root</h2>
+        <p>
+            Agri Root is a leading agricultural company committed to providing the best quality agricultural products for farms and markets across the world. Our goal is to revolutionize the farming industry by offering innovative and sustainable solutions.
+        </p>
+        <p>
+            Our products are designed to ensure that farmers and distributors can maximize their yield and sustainability. Whether it's organic seeds, fertilizers, or farming equipment, we have everything you need.
+        </p>
+    </section>
+
+    <!-- Content Section 2 -->
+    <section class="content-section" >
+        <h2>Who We Are</h2>
+        <p>
+            Agri Root was founded with the mission to innovate and lead in the field of agriculture. We believe that farming should be sustainable and profitable, and we work closely with our partners to create better products for the global market. Our team of experts is always looking for ways to improve efficiency, reduce waste, and increase production.
+        </p>
+    </section>
+
+    <!-- Content Section 3 -->
+    <section class="content-section" >
+        <h2>Our Visionary Approach</h2>
+        <p>
+            Our vision is to create a future where agriculture meets innovation, creating harmony between nature and technology. We aim to empower farmers and producers with tools and knowledge that help create sustainable and profitable farming practices.
+        </p>
+    </section>
+
+    <!-- Content Section 4 (Product List) -->
+    <section class="content-section" >
+        <h2>What We Sell</h2>
+        <p>
+            Explore our wide range of agricultural products. From premium quality seeds to state-of-the-art farming tools, we have everything you need to enhance your farming experience.
+        </p>
+        <ul>
+            <li>Bitter Guard Seeds</li>
+            <li>Bottle Guars Seeds</li>
+            <li>Brinjal Seeds</li>
+            <li>Coriander Seeds</li>
+            <li>Fenugreek Seeds</li>
+            <li>Moringa Seeds</li>
+            <li>Muskmelon Seeds</li>
+            <li>Mustard Seeds</li>
+            <li>Wheat Seeds</li>
+            <li>Onion Seeds</li>
+            <li>Pea Seeds</li>
+            <li>Pumpkin Seeds</li>
+            <li>Radish Seeds</li>
+            <li>Tomato Seeds</li>
+            <li>Watermelon Seeds</li>
+        </ul>
+    </section>
+
+    <!-- Content Section 5 (Contact Information) -->
+    <section class="content-section">
+        <h2>Get Connect To Us</h2>
+        <p>
+            We are always here to help! If you have any questions or inquiries, feel free to reach out to us at:
+        </p>
+        <p>
+            Email: agriroot@gmail.com<br>
+            Phone: 1234567890 <br>
+            Address: 123 Agriculture Lane, Green Valley, Ooty, TamilNadu.
+        </p>
+    </section>
+
+</body>
+</html>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Agri Products. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

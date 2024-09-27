@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Root - Cart Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cart-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        li:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+
+        li button {
+            background-color: #ff6b6b;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        li button:hover {
+            background-color: #ff4c4c;
+        }
+
+        .cart-summary {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a:hover {
+            background-color: #218838;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+            font-size: 1.2rem;
+        }
+    </style>
+    <script>
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your cart is empty</p>';
+            } else {
+                let totalPrice = 0;
+                cart.forEach(function(item, index) {
+                    totalPrice += item.price;
+                    cartItems.innerHTML += `<li>${item.name} - Rs${item.price} 
+                        <button onclick="removeFromCart(${index})">Remove</button></li>`;
+                });
+                document.getElementById('total-price').innerText = 'Total: Rs' + totalPrice;
+            }
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+    </script>
+</head>
+<body onload="displayCart()">
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <ul id="cart-items"></ul>
+        <div class="cart-summary">
+            <h2 id="total-price">Total: Rs0</h2>
+        </div>
+        <a href="products.html">Continue Shopping</a>
+    </div>
+
+</body>
+</html>
